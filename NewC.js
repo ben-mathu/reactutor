@@ -40,12 +40,11 @@ export class NewC extends React.Component {
         <h2>In a child Component</h2>
         <p>Prop passed from parent component is {this.props.Name}</p>
 
+        <p>Value of <b>{this.state.count}</b> PI is <b>{this.state.PIValue}</b></p>
+
         <button onClick={()=> this.addPIvalue()}>Add PI Value</button>
         <button onClick={()=> this.subPIvalue()}>Subtract PI Value</button>
-
-        <h3>Value of PI is {this.props.pi}</h3>
-
-        <p>Value of <b>{this.state.count}</b> PI is <b>{this.state.PIValue}</b></p>
+        
       </div>
     );
   }

@@ -12,9 +12,11 @@ class Hello extends React.Component {
 	}
 
 	render() {
-		const pi = 3.14;
+		const pi = Math.PI;
 		const weekdays = ["Mon","Tue","Wed","Thus","Fri"];
-		const today = "Mon  22nd November, 2017";
+		const today = new Date();
+		const date = today.toDateString();
+		const time = today.toTimeString();
 
 		//JSX code in return function
 		return (
@@ -25,17 +27,17 @@ class Hello extends React.Component {
 
 				<a className="TC">The value of pi is: {pi}</a>
 
+				<div>
+					Date:- <b>{date} {time}</b>
+				</div>
+
 				<ul>Weekdays:- <br/>
 					{weekdays.map((weekdays, index) => (
 						<li key={index}>{weekdays}</li>
 					))}
 				</ul>
 
-				<div>
-					Date:- <b>{today}</b>
-				</div>
-
-				<NewC Name={"TOPCODER"} pi = {pi}/>
+				<NewC Name={"TopCoder"} pi = {pi}/>
 
 			</div>
 		);
